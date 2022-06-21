@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+
 </head>
 <body>
-    <h1>Word Bomb</h1>
-    <ul>
-        <li>Type a word containing the letters given</li>
-        <ul>
-            <li>example: Letters given: <b>EA</b></li>
-            <li>valid answers include: <b>EA</b>T, S<b>EA</b>, or L<b>EA</b>N</li>
-        </ul>
-        <li>Incorrect words will cause the bomb to explode</li>
-        <li>When done, press the reset button. Refreshing the browser won't work</li>
-        <li><b>No repeated words!</b></li>
-    </ul>
-    <form action="/play" method="get">
-        <button type="submit" value="start">START!</button>
-    </form>
-    
+    <div class="container">
+        <h1>Word Bomb</h1>
+        <h3>Instructions:</h3>
+            <p>Type a word containing the letters given:</p>
+            <div class="box">
+                <p>example: Letters given: <b>EA</b></p>
+                <p>valid answers: <b>EA</b>T, S<b>EA</b>, or L<b>EA</b>N</p>
+            </div>
+            <p>Incorrect words will not be penalized</p>
+            <p>When game is over, press the reset button. Refreshing the browser won't work</p>
+            <p><b>No repeated words!</b></p>
+        
+        <form action="/play" method="get">
+            <button type="submit" value="start">Start</button>
+        </form>
+        
+        <p style="margin-top: 100px;">by Kevin Zhang</p>
+        
+    </div>
 </body>
 </html>
