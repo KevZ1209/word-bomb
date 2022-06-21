@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Bomb</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h2>Score: <%= userScore %></h2>
+    <div class="rectangle" style="width: 200px; height: 20px; background-color: turquoise;">Remaining Time</div>
+    <form action="/play" method="post">
+        <h4>Enter a word containing: <%= letters %> </h4>
+        <h4>You have 10 seconds... </h4>
+        <input type="text" name="userWord" id="userInput" autocomplete="off" autofocus="true">
+        <button name="button" type="submit" value="go">Go</button>
+        <button name="button" type="submit" value="reset">Reset</button>
+    </form>
+
+    <h2><%= gameStatus %></h2>
+
+    <script type="text/javascript">
+        function contract() {
+        $(".rectangle").animate({
+            height: '20px',
+            width: '0px'
+        }, 10000);
+        setTimeout(function() {
+            alert("You ran out of time! Click the reset button to play again!");
+        }, 10000)
+        }
+        
+        contract()
+
+    </script>
+
+</body>
+</html>
