@@ -43,6 +43,7 @@ button {
     border: none;
     background-color: #5a80d1;
     color: white;
+    text-align: center
 }
 
 button:hover {
